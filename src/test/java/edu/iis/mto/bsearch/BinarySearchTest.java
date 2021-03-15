@@ -50,8 +50,8 @@ class BinarySearchTest {
     void test4()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
-        SearchResult a = BinarySearch.search(22,someArray);
-        assertEquals(6,a.getPosition());
+        SearchResult a = BinarySearch.search(12,someArray);
+        assertEquals(5,a.getPosition());
         assertEquals(true,a.isFound());
     }
     @Test
