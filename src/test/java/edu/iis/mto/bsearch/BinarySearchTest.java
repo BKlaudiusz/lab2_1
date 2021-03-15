@@ -15,7 +15,7 @@ class BinarySearchTest {
     void setUp() throws Exception {}
 
     @Test
-    void findExistOneElement_InOneElementArray_firstPosition()
+    public void findExistOneElement_InOneElementArray_firstPosition()
     {
         int[] someArray = {1};
         SearchResult a = BinarySearch.search(1,someArray);
@@ -23,7 +23,7 @@ class BinarySearchTest {
         assertEquals(1,a.getPosition());
     }
     @Test
-    void findDontExistOneElement_InOneElementArray()
+    public void findDontExistOneElement_InOneElementArray()
     {
         int[] someArray = {1};
         SearchResult a = BinarySearch.search(2,someArray);
@@ -31,7 +31,7 @@ class BinarySearchTest {
         assertEquals(-1,a.getPosition());
     }
     @Test
-    void findExistOneElement_InManyElementArray_firstPosition()
+    public void findExistOneElement_InManyElementArray_firstPosition()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(3,someArray);
@@ -39,7 +39,7 @@ class BinarySearchTest {
         assertEquals(true,a.isFound());
     }
     @Test
-    void findExistOneElement_InManyElementArray_LastPosition()
+    public void findExistOneElement_InManyElementArray_LastPosition()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(78,someArray);
@@ -47,7 +47,7 @@ class BinarySearchTest {
         assertEquals(true,a.isFound());
     }
     @Test
-    void findExistOneElement_InManyElementArray_CenterPosition()
+    public void findExistOneElement_InManyElementArray_CenterPosition()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(12,someArray);
@@ -55,11 +55,12 @@ class BinarySearchTest {
         assertEquals(true,a.isFound());
     }
     @Test
-    void findDontExistOneElement_InManyElementArray()
+    public void findDontExistOneElement_InManyElementArray()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(-22,someArray);
         assertEquals(-1,a.getPosition());
         assertEquals(false,a.isFound());
     }
+
 }
