@@ -15,7 +15,7 @@ class BinarySearchTest {
     void setUp() throws Exception {}
 
     @Test
-    void test0()
+    void findExistOneElement_InOneElementArray_firstPosition()
     {
         int[] someArray = {1};
         SearchResult a = BinarySearch.search(1,someArray);
@@ -23,7 +23,7 @@ class BinarySearchTest {
         assertEquals(1,a.getPosition());
     }
     @Test
-    void test1()
+    void findDontExistOneElement_InOneElementArray()
     {
         int[] someArray = {1};
         SearchResult a = BinarySearch.search(2,someArray);
@@ -31,7 +31,7 @@ class BinarySearchTest {
         assertEquals(-1,a.getPosition());
     }
     @Test
-    void test2()
+    void findExistOneElement_InManyElementArray_firstPosition()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(3,someArray);
@@ -39,7 +39,7 @@ class BinarySearchTest {
         assertEquals(true,a.isFound());
     }
     @Test
-    void test3()
+    void findExistOneElement_InManyElementArray_LastPosition()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(78,someArray);
@@ -47,7 +47,7 @@ class BinarySearchTest {
         assertEquals(true,a.isFound());
     }
     @Test
-    void test4()
+    void findExistOneElement_InManyElementArray_CenterPosition()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(12,someArray);
@@ -55,7 +55,7 @@ class BinarySearchTest {
         assertEquals(true,a.isFound());
     }
     @Test
-    void test5()
+    void findDontExistOneElement_InManyElementArray()
     {
         int[] someArray = {3, 4, 5, 9, 12, 22, 32, 65, 78};
         SearchResult a = BinarySearch.search(-22,someArray);
