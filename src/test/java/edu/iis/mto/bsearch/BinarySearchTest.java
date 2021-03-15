@@ -62,5 +62,23 @@ class BinarySearchTest {
         assertEquals(-1,a.getPosition());
         assertEquals(false,a.isFound());
     }
-
+    @Test
+    public void TakeAsArgumentArrayNULL()
+    {
+        int[] someArray = null;
+        try{
+            SearchResult a = BinarySearch.search(-22,someArray);
+        }catch (NullPointerException e)
+        {
+            //ignore
+        }
+    }
+    @Test
+    public void TakeAsArgumentArray_EmptyArray()
+    {
+        int[] someArray = {};
+        SearchResult a = BinarySearch.search(-22,someArray);
+        assertEquals(-1,a.getPosition());
+        assertEquals(false,a.isFound());
+    }
 }
